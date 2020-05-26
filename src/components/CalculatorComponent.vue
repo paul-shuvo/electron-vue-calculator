@@ -16,7 +16,7 @@
 
       <div class="flex flex-col ">
         <div>
-          <button v-for="item in btn_group" :key="item.name" class="w-1/4 h-16 no-outline hover:bg-gray-900 font-bold" :class="{ 'rounded-bl-lg': item.name == '.', 'rounded-br-lg': item.name == '+' }" @click="handler(item.value)">
+          <button v-for="item in btn_group" :key="item.name" class="w-1/4 h-16 no-outline hover:bg-gray-900 font-bold" :class="{ 'rounded-bl-lg': item.name == '.', 'rounded-br-lg': item.name == '+' }" @click="handler(item)">
             {{ item.name }}
           </button>
         </div>
@@ -33,26 +33,26 @@ export default {
   data () {
     return {
       btn_group: [
-        { name: 'AC', value: 'Delete' },
-        { name: ')', value: ')' },
-        { name: '(', value: '(' },
-        { name: 'Del', value: 'Backspace' },
-        { name: '7', value: '7' },
-        { name: '8', value: '8' },
-        { name: '9', value: '9' },
-        { name: '/', value: '/' },
-        { name: '4', value: '4' },
-        { name: '5', value: '5' },
-        { name: '6', value: '6' },
-        { name: '*', value: '*' },
-        { name: '1', value: '1' },
-        { name: '2', value: '2' },
-        { name: '3', value: '3' },
-        { name: '-', value: '-' },
-        { name: '.', value: '.' },
-        { name: '0', value: '0' },
-        { name: '=', value: 'Enter' },
-        { name: '+', value: '+' }
+        { name: 'AC', key: 'Delete' },
+        { name: ')', key: ')' },
+        { name: '(', key: '(' },
+        { name: 'Del', key: 'Backspace' },
+        { name: '7', key: '7' },
+        { name: '8', key: '8' },
+        { name: '9', key: '9' },
+        { name: '/', key: '/' },
+        { name: '4', key: '4' },
+        { name: '5', key: '5' },
+        { name: '6', key: '6' },
+        { name: '*', key: '*' },
+        { name: '1', key: '1' },
+        { name: '2', key: '2' },
+        { name: '3', key: '3' },
+        { name: '-', key: '-' },
+        { name: '.', key: '.' },
+        { name: '0', key: '0' },
+        { name: '=', key: 'Enter' },
+        { name: '+', key: '+' }
       ],
       x: '',
       checkEnter: false,
@@ -62,9 +62,10 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('keydown', e => {
-      this.handler(e.key)
-    })
+    window.addEventListener('keydown', this.handler)
+  },
+  beforeDestroy () {
+    window.removeEventListener('keydown', this.handler)
   },
   methods: {
     evaluate: function evaluate () {
@@ -88,7 +89,8 @@ export default {
     closeWindow: function () {
       BrowserWindow.getFocusedWindow().close()
     },
-    handler: function (key) {
+    handler: function (event) {
+      const key = event.key
       console.log(key)
       if (this.nums.indexOf(key) > -1 || this.operators.indexOf(key) > -1) {
         this.x += key
