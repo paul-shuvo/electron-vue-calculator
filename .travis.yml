@@ -1,10 +1,9 @@
 sudo: required
 dist: trusty
 language: node_js
-node_js:
-  - "12"
 node_js: 
 install:
+  - sudo n stable
   - npm install yarn
   - yarn install
 script:
