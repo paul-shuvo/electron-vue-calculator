@@ -1,29 +1,53 @@
-# calculator_app
+![Build Status](https://travis-ci.com/paul-shuvo/electron-vue-calculator.svg?branch=master) ![Codacy Badge](https://app.codacy.com/project/badge/Grade/1928c55512c44f7ba713438e107b9611) ![Total downloads](https://img.shields.io/github/downloads/paul-shuvo/electron-vue-calculator/total)  ![](https://img.shields.io/github/license/paul-shuvo/electron-vue-calculator)
 
-## Project setup
+# Simple calculator app built with vuejs and electronjs
+
+
+<img src="https://i.imgur.com/fh2Fsca.png" alt="drawing" width="300"/>
+
+
+
+
+## Getting started
+### Clone project
 ```
-yarn install
+$ cd << your working directory >>
+$ git clone https://github.com/paul-shuvo/electron-vue-calculator.git
+```
+
+### Install packages
+
+```
+$ cd electron-vue-calculator
+$ yarn install 
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn electron:serve
 ```
+
+  
 
 ### Compiles and minifies for production
+
 ```
-yarn build
+yarn electron:build
 ```
 
+
 ### Run your unit tests
+
 ```
 yarn test:unit
 ```
 
 ### Lints and fixes files
+
 ```
 yarn lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
