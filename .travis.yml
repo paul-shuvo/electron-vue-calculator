@@ -1,5 +1,5 @@
 sudo: required
-dist: trusty
+dist: bionic
 language: node_js
 node_js: 
 install:
@@ -7,7 +7,6 @@ install:
   - nvm install v12.16.3
   - npm install yarn
   - yarn install
-  - sudo apt update
   - sudo apt-get install snapd
   - sudo snap install snapcraft --classic 
 script:
