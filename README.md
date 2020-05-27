@@ -6,6 +6,7 @@
 <img src="https://i.imgur.com/fh2Fsca.png" alt="drawing" width="300"/>
 
 
+### [Download](https://github.com/paul-shuvo/electron-vue-calculator/releases)
 
 
 ## Getting started
