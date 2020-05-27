@@ -34,8 +34,8 @@ export default {
     return {
       btn_group: [
         { name: 'AC', key: 'Delete' },
-        { name: ')', key: ')' },
         { name: '(', key: '(' },
+        { name: ')', key: ')' },
         { name: 'Del', key: 'Backspace' },
         { name: '7', key: '7' },
         { name: '8', key: '8' },
