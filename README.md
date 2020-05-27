@@ -7,13 +7,9 @@
   ![Build Status](https://travis-ci.com/paul-shuvo/electron-vue-calculator.svg) ![Codacy Badge](https://app.codacy.com/project/badge/Grade/1928c55512c44f7ba713438e107b9611) ![Total downloads](https://img.shields.io/github/downloads/paul-shuvo/electron-vue-calculator/total)  ![](https://img.shields.io/github/license/paul-shuvo/electron-vue-calculator) <a href="https://icons8.com/">![using icons8](https://img.shields.io/badge/using-icons8-brightgreen)</a>
 
   <img src="https://i.imgur.com/fh2Fsca.png" alt="drawing" width="300"/>
+  
+  ### [Download](https://github.com/paul-shuvo/electron-vue-calculator/releases)
 </div>
-# 
-
-
-
-
-### [Download](https://github.com/paul-shuvo/electron-vue-calculator/releases)
 
 
 ## Getting started
