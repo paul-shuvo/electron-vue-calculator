@@ -12,14 +12,17 @@
     "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "postuninstall": "electron-builder install-app-deps",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "main": "background.js",
   "dependencies": {
     "chai-as-promised": "^7.1.1",
     "core-js": "^3.6.4",
     "tailwindcss": "^1.4.6",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "snyk": "^1.366.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
@@ -70,5 +73,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "snyk": true
 }
