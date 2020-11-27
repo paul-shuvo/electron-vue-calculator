@@ -19,7 +19,7 @@
   "main": "background.js",
   "dependencies": {
     "chai-as-promised": "^7.1.1",
-    "core-js": "^3.6.4",
+    "core-js": "^3.7.0",
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.11",
     "snyk": "^1.366.2"
