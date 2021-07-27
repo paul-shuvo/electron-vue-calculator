@@ -22,7 +22,7 @@
     "core-js": "^3.6.4",
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.11",
-    "snyk": "^1.366.2"
+    "snyk": "^1.667.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
